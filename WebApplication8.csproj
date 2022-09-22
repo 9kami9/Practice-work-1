@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Goods.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="System.Data.OleDb" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\Goods.cshtml" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Товары";
+}
+
+<html>
+    <body>
+        <b>Список товаров</b>
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <td>Название</td>
+                    <td>Дата привоза</td>
+                    <td>Цена</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var stud in ViewBag.Dis)
+                {
+                <tr>
+                    <td><a href="/Home/Info/@stud["ID Продукта"]">@stud["Название"]</a></td>
+                    <td>@stud["Дата привоза"]</td>
+                    <td>@stud["Цена"]</td>
+                </tr>
+                }
+            </tbody>
+        </table>        
+    </body>
+</html>

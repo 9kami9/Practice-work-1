@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Область товаров";
+}
+
+<html>
+<body>
+    <b>Область товаров</b>
+    <table class="table table-dark table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Название области</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var spec in ViewBag.Dis)
+            {
+                <tr>
+                    <form method="post" action="">
+                        <input type="hidden" value="@spec["Название области"]" name="name" />
+                        <td><button  name="name" href="" type="submit">@spec["Название области"]</button></td></form>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>
